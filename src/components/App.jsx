@@ -1,18 +1,19 @@
-import PropTypes from "prop-types";
-import { Profile } from './Profile';
+import PropTypes from 'prop-types';
+import { Profile } from './Profile/Profile';
 import user from './user.json';
+import { Box } from 'components/Box';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
+    <Box
+      height="100vh"
+      display="flex"
+      justifyContent="center"
+      // alignItems="center"
+      fontSize="14px"
+      color="#010101"
+      pt={4}
+      bg="#ccc"
     >
       <Profile
         name={user.username}
@@ -23,7 +24,7 @@ export const App = () => {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-    </div>
+    </Box>
   );
 };
 
@@ -35,4 +36,4 @@ Profile.propTypes = {
   followers: PropTypes.number,
   views: PropTypes.number,
   likes: PropTypes.number,
-}
+};
