@@ -1,5 +1,5 @@
 import { Box } from 'components/Box';
-import css from "components/Profile/Profile.module.css"
+import css from 'components/Profile/Profile.module.css';
 
 export const Profile = ({
   name,
@@ -11,7 +11,14 @@ export const Profile = ({
   likes,
 }) => {
   return (
-    <Box width="300px" height="440px" bg="#fff" pt={4} borderRadius="4px">
+    <Box
+      width="300px"
+      height="440px"
+      bg="#fff"
+      pt={4}
+      borderRadius="4px"
+      mb={3}
+    >
       <Box
         display="flex"
         flexDirection="column"

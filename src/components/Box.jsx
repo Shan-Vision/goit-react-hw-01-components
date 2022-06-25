@@ -16,5 +16,3 @@ export const Box = styled('div')(
   border,
   typography
 );
-
-console.log(color);
