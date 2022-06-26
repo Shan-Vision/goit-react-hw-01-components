@@ -1,21 +1,16 @@
 import PropTypes from 'prop-types';
 import user from './user.json';
 import data from './data.json';
+import friends from './friends.json';
 import { Profile } from './Profile/Profile';
-import { Statistics, getRandomColor } from './Statistics/Statistics';
+import { Statistics } from './Statistics/Statistics';
+import { FriendList } from './FriendList/FriendList';
 import { Box } from 'components/Box';
-import { ThemeProvider } from 'styled-components';
-
-const theme = {
-  backgroundColor: getRandomColor(),
-};
-
-
+// import { ThemeProvider } from 'styled-components';
 
 export const App = () => {
   return (
     <Box
-      height="100vh"
       display="flex"
       flexDirection="column"
       alignItems="center"
@@ -33,23 +28,27 @@ export const App = () => {
         views={user.stats.views}
         likes={user.stats.likes}
       />
-      <ThemeProvider theme={theme}>
-        <Statistics title="Upload stats" stats={data} />
-      </ThemeProvider>
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+      <FriendList friends={friends} />;
     </Box>
   );
 };
 Profile.propTypes = {
-  name: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  image: PropTypes.string,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
 };
 
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
-  stats: PropTypes.array,
+  stats: PropTypes.array.isRequired,
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.array.isRequired,
 };

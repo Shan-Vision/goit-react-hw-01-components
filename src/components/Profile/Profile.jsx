@@ -1,4 +1,5 @@
 import { Box } from 'components/Box';
+import PropTypes from 'prop-types';
 import css from 'components/Profile/Profile.module.css';
 
 export const Profile = ({
@@ -48,4 +49,14 @@ export const Profile = ({
       </Box>
     </Box>
   );
+};
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
 };
