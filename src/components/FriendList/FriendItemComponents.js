@@ -8,6 +8,7 @@ export const FriendListWrapp = styled.ul`
   gap: 16px;
   align-content: center;
   width: 300px;
+  margin-bottom: 16px;
 `;
 
 export const Li = styled.li`

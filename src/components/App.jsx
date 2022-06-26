@@ -2,11 +2,12 @@ import PropTypes from 'prop-types';
 import user from './user.json';
 import data from './data.json';
 import friends from './friends.json';
+import transactions from './transactions.json';
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
 import { FriendList } from './FriendList/FriendList';
+import { TransactionHistory } from './Transaction/TransactionHistory';
 import { Box } from 'components/Box';
-// import { ThemeProvider } from 'styled-components';
 
 export const App = () => {
   return (
@@ -31,6 +32,7 @@ export const App = () => {
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />;
     </Box>
   );
 };
@@ -45,7 +47,7 @@ Profile.propTypes = {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.array.isRequired,
 };
 
