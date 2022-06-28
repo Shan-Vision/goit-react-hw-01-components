@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 export const Table = styled.table`
@@ -20,19 +19,3 @@ export const Table = styled.table`
 export const TableHead = styled.thead`
   background-color: #10ebca;
 `;
-
-export const Transactions = ({ type, amount, currency }) => {
-  return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
-  );
-};
-
-Transactions.propTypes = {
-  type: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  currency: PropTypes.string.isRequired,
-};

@@ -11,7 +11,7 @@ export const FriendListWrapp = styled.ul`
   margin-bottom: 16px;
 `;
 
-export const Li = styled.li`
+export const Item = styled.li`
   display: flex;
   align-items: center;
   background-color: #fff;
@@ -24,6 +24,9 @@ export const Indicator = styled.span`
   width: 15px;
   height: 15px;
   border-radius: 50%;
+  margin-left: 10px;
+  margin-right:10px;
+
   background-color: ${props => (props.isOnline ? 'green' : 'red')};
 `;
 

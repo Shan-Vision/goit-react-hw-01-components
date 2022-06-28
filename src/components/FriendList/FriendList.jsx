@@ -7,7 +7,7 @@ export const FriendList = ({ friends }) => {
     <FriendListWrapp>
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
-          <FriendsItem avatar={avatar} name={name} status={isOnline} key={id} />
+          <FriendsItem avatar={avatar} name={name} isOnline={isOnline} key={id} />
         );
       })}
     </FriendListWrapp>

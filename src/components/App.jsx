@@ -25,9 +25,7 @@ export const App = () => {
         tag={user.tag}
         location={user.location}
         image={user.avatar}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}
+        stats={user.stats}
       />
       <Statistics title="Upload stats" stats={data} />
       <Statistics stats={data} />
@@ -41,9 +39,7 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  views: PropTypes.number.isRequired,
-  likes: PropTypes.number.isRequired,
+  stats: PropTypes.object.isRequired,
 };
 
 Statistics.propTypes = {
